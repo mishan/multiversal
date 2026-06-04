@@ -427,6 +427,7 @@ pascal OSErr GetFInfo(ConstStr255Param fileName, short vRefNum,
     pb.fileParam.ioVRefNum = vRefNum;
     pb.fileParam.ioNamePtr = (StringPtr)fileName;
     pb.fileParam.ioFVersNum = 0;
+    pb.fileParam.ioFDirlndex = 0;
     err = PBGetFInfoSync(&pb);
     *fndrInfo = pb.fileParam.ioFlFndrInfo;
     return err;
